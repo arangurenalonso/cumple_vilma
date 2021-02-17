@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: justify;
+}
+
+.container, .book-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #909090;
+}
+
+.book-content {
+  width: 100%;
+  width: 600px;
+  height: 564px;
+  position: relative;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.book {
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-box-shadow: 0 0 10px 0;
+          box-shadow: 0 0 10px 0;
+}
+
+.face-front, .face-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+}
+
+.img-puesto {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.face-front {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-left: black 3px solid;
+}
+
+.face-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(-1px) rotateY(180deg);
+          transform: translateZ(-1px) rotateY(180deg);
+  -webkit-box-shadow: inset -3px 1px 20px -7px black;
+          box-shadow: inset -3px 1px 20px -7px black;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-right: black 3px solid;
+}
+
+#portada {
+  background: url("../img/bookPortada.jpg");
+}
+
+#portada-back {
+  background: url("../img/Editorial_Patalon.jpg");
+}
+
+#portada, #portada-back {
+  background-size: 100% 100%;
+}
+
+/* Clases que se agregaran con Javascript */
+.trnsf {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+}
+
+.trnsf-reset {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+/* @media para hacer el texto responsivo */
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 12px;
+  }
+}
+
+.cambiarHoja {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 15px 0px 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.pag_sig {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(#bf930d));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), #bf930d);
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pag_ant {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.4)), to(#bf930d));
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.4), #bf930d);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.ocultar {
+  display: none;
+}
+
+.contenedor-video {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 10px;
+}
+
+.video {
+  width: 100%;
+  z-index: 2;
+  border: 2px solid #a39058;
+  border-radius: 15px;
+}
+
+.contenedor-texto {
+  width: 100%;
+  height: 100%;
+  background-color: #b9b9b9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
